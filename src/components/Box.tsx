@@ -1,6 +1,6 @@
 import { View, ViewProps } from 'react-native';
-import withSs from '~/util/withSs';
+import withCs from '~/util/withCs';
 
-const Box = withSs<ViewProps>(View);
+const Box = withCs<ViewProps>(View);
 
 export default Box;

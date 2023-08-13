@@ -1,5 +1,5 @@
 {
-  "name": "shipshow-native",
+  "name": "cosmicui-native",
   "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
     "test": "echo \"KEKW\" && exit 1"
   },
   "keywords": [],
-  "author": "Dexxiez",
+  "author": "CosmicTiger-AU",
   "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",

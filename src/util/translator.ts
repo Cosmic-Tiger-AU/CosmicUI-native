@@ -1,5 +1,5 @@
 import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
-import { ShipStyles } from '~/types/ship-styles';
+import { CosmicStyles } from '~/types/cosmic-styles';
 
 /**
  * Converts shorthand style properties to React Native styles.
@@ -7,10 +7,10 @@ import { ShipStyles } from '~/types/ship-styles';
  * @param shorthand - The shorthand style object of type ShipStyles.
  * @returns The converted React Native styles of type T (ViewStyle, TextStyle, ImageStyle).
  */
-export const translateShipStyles = <
+export const translateCosmicStyles = <
   T extends ViewStyle | TextStyle | ImageStyle,
 >(
-  shorthand?: ShipStyles
+  shorthand?: CosmicStyles
 ): Partial<T> => {
   if (!shorthand) {
     return {};

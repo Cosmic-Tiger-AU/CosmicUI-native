@@ -1,7 +1,7 @@
 /**
  * Represents the styles that can be applied to a ship element.
  */
-export type ShipStyles = {
+export type CosmicStyles = {
   /**
    * Margin value for the ship element.
    */

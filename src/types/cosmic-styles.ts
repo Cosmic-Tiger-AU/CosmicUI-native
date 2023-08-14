@@ -75,4 +75,69 @@ export type CosmicStyles = {
    * Overrides pt and pb.
    */
   py?: number;
+
+  /**
+   * Determines how the container will display its children.
+   * - `flex`: Container will act as a flex container.
+   * - `none`: Container will not display its children.
+   */
+  display?: "flex" | "none";
+
+  /**
+   * Specifies the direction of the flexible items.
+   * - `row`: Horizontal from left to right.
+   * - `row-reverse`: Horizontal from right to left.
+   * - `column`: Vertical from top to bottom.
+   * - `column-reverse`: Vertical from bottom to top.
+   */
+  flexDirection?: "row" | "row-reverse" | "column" | "column-reverse";
+
+  /**
+   * Controls whether the flexible container is single-lined or multi-lined.
+   * - `nowrap`: Single-line, no wrapping.
+   * - `wrap`: Multi-lined, may wrap.
+   * - `wrap-reverse`: Multi-lined, may wrap in reverse.
+   */
+  flexWrap?: "nowrap" | "wrap" | "wrap-reverse";
+
+  /**
+   * Describes how to align the flexible container's items when there is extra space in the horizontal axis.
+   * - `flex-start`: Items are grouped at the start.
+   * - `flex-end`: Items are grouped at the end.
+   * - `center`: Items are centered.
+   * - `space-between`: Items are evenly distributed with the first item at the start and the last at the end.
+   * - `space-around`: Items are evenly distributed with equal space around them.
+   */
+  justifyContent?:
+    | "flex-start"
+    | "flex-end"
+    | "center"
+    | "space-between"
+    | "space-around";
+
+  /**
+   * Describes the default alignment for items inside the flexible container.
+   * - `flex-start`: Items are placed at the start.
+   * - `flex-end`: Items are placed at the end.
+   * - `center`: Items are centered.
+   * - `baseline`: Items are aligned by their baselines.
+   * - `stretch`: Items are stretched to fit the container.
+   */
+  alignItems?: "flex-start" | "flex-end" | "center" | "baseline" | "stretch";
+
+  /**
+   * Represents the ability of a flex item to alter its dimensions and fill available space.
+   */
+  flex: number;
+
+  /**
+   * Represents the border property, which can take values like.
+   * @example "1px solid black"
+   */
+  border?: string;
+
+  /**
+   * Represents the radius of the border, in pixels.
+   */
+  borderRadius?: number;
 };

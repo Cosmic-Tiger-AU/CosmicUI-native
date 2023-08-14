@@ -1,5 +1,5 @@
-import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
-import { CosmicStyles } from '~/types/cosmic-styles';
+import { ImageStyle, TextStyle, ViewStyle } from "react-native";
+import { CosmicStyles } from "~/types/cosmic-styles";
 
 /**
  * Converts shorthand style properties to React Native styles.
@@ -80,6 +80,45 @@ export const translateCosmicStyles = <
   if (shorthand.py !== undefined) {
     styles.paddingTop = shorthand.py;
     styles.paddingBottom = shorthand.py;
+  }
+
+  // Display and Flex
+
+  if (shorthand.display !== undefined) {
+    styles.display = shorthand.display;
+  }
+
+  if (shorthand.flexDirection !== undefined) {
+    styles.flexDirection = shorthand.flexDirection;
+  }
+
+  if (shorthand.flex !== undefined) {
+    styles.flex = shorthand.flex;
+  }
+
+  if (shorthand.flexWrap !== undefined) {
+    styles.flexWrap = shorthand.flexWrap;
+  }
+
+  if (shorthand.justifyContent !== undefined) {
+    styles.justifyContent = shorthand.justifyContent;
+  }
+
+  if (shorthand.alignItems !== undefined) {
+    styles.alignItems = shorthand.alignItems;
+  }
+
+  // Border
+
+  if (shorthand.border !== undefined) {
+    const [width, , color] = shorthand.border.split(" ");
+
+    styles.borderWidth = parseFloat(width); // Convert "1px" to 1
+    styles.borderColor = color;
+  }
+
+  if (shorthand.borderRadius !== undefined) {
+    styles.borderRadius = shorthand.borderRadius;
   }
 
   return styles;

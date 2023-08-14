@@ -1,5 +1,5 @@
 {
-  "Display": "ShipShow React Native",
+  "Display": "CosmicUI React Native",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

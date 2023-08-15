@@ -24,75 +24,75 @@ export type CosmicStyles = {
    */
   h?: DimensionValue;
   /**
-   * Margin value for the ship element.
+   * Margin value for the cosmic element.
    */
   m?: DimensionValue;
 
   /**
-   * Margin value for the bottom of the ship element.
+   * Margin value for the bottom of the cosmic element.
    */
   mb?: DimensionValue;
 
   /**
-   * Margin value for the left side of the ship element.
+   * Margin value for the left side of the cosmic element.
    */
   ml?: DimensionValue;
 
   /**
-   * Margin value for the right side of the ship element.
+   * Margin value for the right side of the cosmic element.
    */
   mr?: DimensionValue;
 
   /**
-   * Margin value for the top of the ship element.
+   * Margin value for the top of the cosmic element.
    */
   mt?: DimensionValue;
 
   /**
-   * Margin value for the left and right sides of the ship element.
+   * Margin value for the left and right sides of the cosmic element.
    * Overrides ml and mr.
    */
   mx?: DimensionValue;
 
   /**
-   * Margin value for the top and bottom sides of the ship element.
+   * Margin value for the top and bottom sides of the cosmic element.
    * Overrides mt and mb.
    */
   my?: DimensionValue;
 
   /**
-   * Padding value for the ship element.
+   * Padding value for the cosmic element.
    */
   p?: DimensionValue;
 
   /**
-   * Padding value for the bottom of the ship element.
+   * Padding value for the bottom of the cosmic element.
    */
   pb?: DimensionValue;
 
   /**
-   * Padding value for the left side of the ship element.
+   * Padding value for the left side of the cosmic element.
    */
   pl?: DimensionValue;
 
   /**
-   * Padding value for the right side of the ship element.
+   * Padding value for the right side of the cosmic element.
    */
   pr?: DimensionValue;
 
   /**
-   * Padding value for the top of the ship element.
+   * Padding value for the top of the cosmic element.
    */
   pt?: DimensionValue;
 
   /**
-   * Padding value for the left and right sides of the ship element.
+   * Padding value for the left and right sides of the cosmic element.
    * Overrides pl and pr.
    */
   px?: DimensionValue;
 
   /**
-   * Padding value for the top and bottom sides of the ship element.
+   * Padding value for the top and bottom sides of the cosmic element.
    * Overrides pt and pb.
    */
   py?: DimensionValue;

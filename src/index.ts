@@ -4,11 +4,11 @@ export { ThemeProvider, useTheme } from "./components/CosmicProvider";
 export { default as Text } from "./components/Text";
 export { default as TextBox } from "./components/TextBox";
 export { default as TouchableOpacity } from "./components/TouchableOpacity";
-export { default as Typography } from "./components/Typography";
+export { mergeStyles } from "./util/mergeStyles";
 
 export type {
-  CosmicStyles,
   ColorTypes,
+  CosmicStyles,
   WeightTypes,
 } from "./types/cosmic-styles";
 export type { CosmicTheme } from "./types/cosmic-theme";

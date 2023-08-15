@@ -4,7 +4,7 @@ import { CosmicStyles } from "~/types/cosmic-styles";
 /**
  * Converts shorthand style properties to React Native styles.
  *
- * @param shorthand - The shorthand style object of type ShipStyles.
+ * @param shorthand - The shorthand style object.
  * @returns The converted React Native styles of type T (ViewStyle, TextStyle, ImageStyle).
  */
 export const translateCosmicStyles = <
@@ -17,6 +17,16 @@ export const translateCosmicStyles = <
   }
 
   const styles = {} as T;
+
+  // Width and Height
+
+  if (shorthand.w !== undefined) {
+    styles.width = shorthand.w;
+  }
+
+  if (shorthand.h !== undefined) {
+    styles.height = shorthand.h;
+  }
 
   // Margins
 
@@ -108,6 +118,10 @@ export const translateCosmicStyles = <
     styles.alignItems = shorthand.alignItems;
   }
 
+  if (shorthand.gap !== undefined) {
+    styles.gap = shorthand.gap;
+  }
+
   // Border
 
   if (shorthand.border !== undefined) {
@@ -119,6 +133,17 @@ export const translateCosmicStyles = <
 
   if (shorthand.borderRadius !== undefined) {
     styles.borderRadius = shorthand.borderRadius;
+  }
+
+  //Color
+  if (shorthand.bg !== undefined) {
+    styles.backgroundColor = shorthand.bg;
+  }
+
+  // Misc
+  if (shorthand.textAlign !== undefined) {
+    // @ts-ignore - textAlign is not defined on ViewStyle but will be split out
+    styles.textAlign = shorthand.textAlign;
   }
 
   return styles;

@@ -28,7 +28,8 @@
     "prettier": "3.0.1",
     "tsup": "^7.2.0",
     "typedoc": "^0.24.8",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "husky": "^8.0.0"
   },
   "homepage": "https://github.com/Cosmic-Tiger-AU/CosmicUI-native#readme",
   "keywords": [
@@ -44,6 +45,7 @@
     "docs": "typedoc src/index.ts",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
-    "test": "echo \"KEKW\" && exit 1"
+    "test": "echo \"KEKW\" && exit 1",
+    "prepare": "husky install"
   }
 }

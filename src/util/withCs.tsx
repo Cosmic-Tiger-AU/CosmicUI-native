@@ -42,7 +42,7 @@ export const getFont = (theme: CosmicTheme, weight: string) => {
     case "bold":
       return theme.fonts.bold;
     default:
-      return "sans-serif";
+      return theme.fonts.regular || "sans-serif";
   }
 };
 

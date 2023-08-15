@@ -8,12 +8,13 @@ const BasicText = withCs<TextProps>(NativeText);
 const Text = React.forwardRef<
   React.ElementRef<typeof BasicText>,
   TextProps &
-    CosmicProps<typeof NativeText> & {
+    //   typeof native next probably not correct due to missing props error when used
+    CosmicProps<TextProps> & {
       children: React.ReactNode;
     }
 >(({ children, ...props }, ref) => {
   const theme = useTheme();
-  props.style = [
+  const finalStyle = [
     {
       color: getColor(theme, props.color),
       fontSize: props.cs?.fontSize || 16,
@@ -23,7 +24,7 @@ const Text = React.forwardRef<
   ];
 
   return (
-    <BasicText ref={ref} {...props}>
+    <BasicText ref={ref} {...props} style={finalStyle}>
       {children}
     </BasicText>
   );

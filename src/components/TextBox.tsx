@@ -6,12 +6,11 @@ import React from "react";
 const BasicTextbox = withCs<TextInputProps>(TextInput);
 
 const Textbox = React.forwardRef<
-  HTMLInputElement,
+  React.ElementRef<typeof BasicTextbox>,
   TextInputProps &
-    CosmicProps<typeof TextInput> & {
-      children: React.ReactNode;
-    }
->((props, ref) => {
+    //   typeof native next probably not correct due to missing props error when used
+    CosmicProps<TextInputProps>
+>(({ ...props }, ref) => {
   const theme = useTheme();
   const mergedStyle = [
     {
@@ -22,11 +21,7 @@ const Textbox = React.forwardRef<
     props.style,
   ];
 
-  return (
-    <BasicTextbox {...props} ref={ref} style={mergedStyle}>
-      {props.children}
-    </BasicTextbox>
-  );
+  return <BasicTextbox ref={ref} {...props} style={mergedStyle} />;
 });
 
 export default Textbox;

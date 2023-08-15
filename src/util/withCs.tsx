@@ -14,7 +14,7 @@ export type CosmicProps<P> = P & {
   weight?: WeightTypes;
 };
 
-const getColor = (theme: CosmicTheme, color: string) => {
+export const getColor = (theme: CosmicTheme, color: string) => {
   switch (color) {
     case "primary":
       return theme.colors.primary;
@@ -33,7 +33,7 @@ const getColor = (theme: CosmicTheme, color: string) => {
   }
 };
 
-const getFont = (theme: CosmicTheme, weight: string) => {
+export const getFont = (theme: CosmicTheme, weight: string) => {
   switch (weight) {
     case "light":
       return theme.fonts.light;
@@ -46,7 +46,7 @@ const getFont = (theme: CosmicTheme, weight: string) => {
   }
 };
 
-const getWeight = (theme: CosmicTheme, weight: string): number => {
+export const getWeight = (theme: CosmicTheme, weight: string): number => {
   switch (weight) {
     case "light":
       return 300;
@@ -65,23 +65,11 @@ const withCs = <P extends { style?: any }>(
   PropsWithoutRef<CosmicProps<P>> & RefAttributes<any>
 > => {
   return forwardRef((props: CosmicProps<P>, ref: React.Ref<any>) => {
-    const theme = useTheme();
-    const themeStyles = {
-      color: getColor(theme, props.color),
-      fontFamily: getFont(theme, props.weight),
-      fontWeight: getWeight(theme, props.weight),
-    };
-    const miscPropStyles = {
-      fontSize: props.cs?.fontSize,
-    };
     const { cs, style, ...rest } = props;
     const smashedStyles = cs ? translateCosmicStyles(cs) : {};
+
     return (
-      <Component
-        {...(rest as P)}
-        style={[style, miscPropStyles, smashedStyles, themeStyles]}
-        ref={ref}
-      />
+      <Component {...(rest as P)} style={[style, smashedStyles]} ref={ref} />
     );
   });
 };

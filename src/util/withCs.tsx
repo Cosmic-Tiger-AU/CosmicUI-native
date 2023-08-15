@@ -4,9 +4,9 @@ import React, {
   RefAttributes,
   forwardRef,
 } from "react";
-import { translateCosmicStyles } from "~/util/translator";
-import { CosmicStyles, CosmicTheme, useTheme } from "..";
 import { ColorTypes, WeightTypes } from "~/types/cosmic-styles";
+import { translateCosmicStyles } from "~/util/translator";
+import { CosmicStyles, CosmicTheme } from "..";
 
 export type CosmicProps<P> = P & {
   cs?: CosmicStyles;
@@ -29,7 +29,7 @@ export const getColor = (theme: CosmicTheme, color: string) => {
     case "textSecondary":
       return theme.colors.textSecondary;
     default:
-      return color || "black";
+      return color || "purple";
   }
 };
 

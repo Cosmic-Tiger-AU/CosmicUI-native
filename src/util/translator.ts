@@ -135,6 +135,11 @@ export const translateCosmicStyles = <
     styles.borderRadius = shorthand.borderRadius;
   }
 
+  //Color
+  if (shorthand.bg !== undefined) {
+    styles.backgroundColor = shorthand.bg;
+  }
+
   // Misc
   if (shorthand.textAlign !== undefined) {
     // @ts-ignore - textAlign is not defined on ViewStyle but will be split out

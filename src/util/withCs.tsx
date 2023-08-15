@@ -6,17 +6,12 @@ import React, {
 } from "react";
 import { translateCosmicStyles } from "~/util/translator";
 import { CosmicStyles, CosmicTheme, useTheme } from "..";
+import { ColorTypes, WeightTypes } from "~/types/cosmic-styles";
 
 export type CosmicProps<P> = P & {
   cs?: CosmicStyles;
-  color?:
-    | "primary"
-    | "secondary"
-    | "background"
-    | "light"
-    | "textPrimary"
-    | "textSecondary";
-  weight?: "light" | "regular" | "bold";
+  color?: ColorTypes;
+  weight?: WeightTypes;
 };
 
 const getColor = (theme: CosmicTheme, color: string) => {
@@ -47,7 +42,7 @@ const getFont = (theme: CosmicTheme, weight: string) => {
     case "bold":
       return theme.fonts.bold;
     default:
-      return weight || "regular";
+      return "sans-serif";
   }
 };
 
@@ -76,12 +71,15 @@ const withCs = <P extends { style?: any }>(
       fontFamily: getFont(theme, props.weight),
       fontWeight: getWeight(theme, props.weight),
     };
+    const miscPropStyles = {
+      fontSize: props.cs?.fontSize,
+    };
     const { cs, style, ...rest } = props;
     const smashedStyles = cs ? translateCosmicStyles(cs) : {};
     return (
       <Component
         {...(rest as P)}
-        style={[style, smashedStyles, themeStyles]}
+        style={[style, miscPropStyles, smashedStyles, themeStyles]}
         ref={ref}
       />
     );

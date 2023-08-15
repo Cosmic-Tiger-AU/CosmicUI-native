@@ -135,5 +135,11 @@ export const translateCosmicStyles = <
     styles.borderRadius = shorthand.borderRadius;
   }
 
+  // Misc
+  if (shorthand.textAlign !== undefined) {
+    // @ts-ignore - textAlign is not defined on ViewStyle but will be split out
+    styles.textAlign = shorthand.textAlign;
+  }
+
   return styles;
 };

@@ -1,5 +1,15 @@
 import { DimensionValue } from "react-native";
 
+export type ColorTypes =
+  | "primary"
+  | "secondary"
+  | "background"
+  | "light"
+  | "textPrimary"
+  | "textSecondary";
+
+export type WeightTypes = "light" | "regular" | "bold";
+
 /**
  * Represents the styles that can be applied to an element.
  */
@@ -156,4 +166,29 @@ export type CosmicStyles = {
    * Represents the radius of the border, in pixels.
    */
   borderRadius?: number;
+
+  /**
+   * Represents the color of the element, usually font color.
+   */
+  color?: ColorTypes | string;
+
+  /**
+   * Represents the background color
+   */
+  bg?: ColorTypes | string;
+
+  /**
+   * Represents the font family of the element.
+   */
+  fontFamily?: string;
+
+  /**
+   * Represents the font size in pixels
+   */
+  fontSize?: number;
+
+  /**
+   * Set text align
+   */
+  textAlign?: "left" | "right" | "center" | "justify";
 };

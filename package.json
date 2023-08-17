@@ -42,7 +42,7 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --clean --sourcemap",
-    "docs": "typedoc src/index.ts",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "test": "echo \"KEKW\" && exit 1",

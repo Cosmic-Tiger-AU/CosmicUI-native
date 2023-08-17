@@ -9,9 +9,9 @@ const StyledTextInput = withTextStyle<TextInputProps>(BaseTextInput);
 
 export type CosmicTextInputProps = CosmicTextProps<TextInputProps> & {
   style?: CosmicTextStyle;
-  cursorColor?: ColorTypes,
-  placeholderTextColor?: ColorTypes,
-  selectionColor?: ColorTypes,
+  cursorColor?: ColorTypes;
+  placeholderTextColor?: ColorTypes;
+  selectionColor?: ColorTypes;
 } & React.RefAttributes<any>;
 
 const TextInput = React.forwardRef<
@@ -21,7 +21,10 @@ const TextInput = React.forwardRef<
   const theme = useTheme();
 
   const cursorColor = getColor(theme, props.cursorColor || "primary");
-  const placeholderTextColor = getColor(theme, props.placeholderTextColor || "lightGray");
+  const placeholderTextColor = getColor(
+    theme,
+    props.placeholderTextColor || "lightGray"
+  );
   const selectionColor = getColor(theme, props.selectionColor || "primary");
 
   const colorProps = { cursorColor, placeholderTextColor, selectionColor };

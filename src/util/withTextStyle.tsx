@@ -10,6 +10,7 @@ import { CosmicTheme } from "..";
 import { getColor } from "~/types/color-types";
 import { getFont } from "~/types/font-types";
 import { CosmicTextStyle } from "~/types/cosmic-text-style";
+import { translateCosmicViewStyles } from "~/util/withViewStyle";
 
 export type CosmicTextProps<P> = P & {
   style?: CosmicTextStyle;
@@ -21,6 +22,8 @@ export const translateCosmicTextStyles = <
   theme: CosmicTheme,
   style?: CosmicTextStyle
 ): Partial<T> => {
+
+  style = translateCosmicViewStyles(theme, style);
 
   if(style.fontWeight) {
     const [ family, weight ] = getFont(theme, style.fontWeight);

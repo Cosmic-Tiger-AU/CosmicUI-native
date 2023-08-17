@@ -1,4 +1,4 @@
-export { default as Box } from "./components/Box";
+export { default as View } from "./components/View";
 export { default as Button } from "./components/Button";
 export { ThemeProvider, useTheme } from "./components/CosmicProvider";
 export { default as Text } from "./components/Text";

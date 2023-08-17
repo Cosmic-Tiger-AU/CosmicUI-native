@@ -1,5 +1,5 @@
 export { default as View } from "./components/View";
-export { default as Button } from "./components/Button";
+export { default as Button } from "./components/TouchableOpacity";
 export { ThemeProvider, useTheme } from "./components/CosmicProvider";
 export { default as Text } from "./components/Text";
 export { default as TextInput } from "./components/TextInput";

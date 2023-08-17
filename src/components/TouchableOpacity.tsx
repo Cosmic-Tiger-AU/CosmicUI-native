@@ -1,9 +1,10 @@
 import {
-  TouchableOpacity as NativeTouch,
+  TouchableOpacity as BaseTouchableOpacity,
   TouchableOpacityProps,
-} from 'react-native';
-import withCs from '~/util/withCs';
+} from "react-native";
+import withViewStyle from "~/util/withViewStyle";
 
-const TouchableOpacity = withCs<TouchableOpacityProps>(NativeTouch);
+const TouchableOpacity =
+  withViewStyle<TouchableOpacityProps>(BaseTouchableOpacity);
 
 export default TouchableOpacity;

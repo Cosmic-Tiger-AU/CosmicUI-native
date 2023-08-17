@@ -1,6 +1,6 @@
 import { View as BaseView, ViewProps } from "react-native";
-import withCs from "~/util/withCs";
+import withViewStyle from "~/util/withViewStyle";
 
-const View = withCs<ViewProps>(BaseView);
+const View = withViewStyle<ViewProps>(BaseView);
 
 export default View;

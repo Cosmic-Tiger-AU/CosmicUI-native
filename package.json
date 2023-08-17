@@ -47,5 +47,6 @@
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "test": "echo \"KEKW\" && exit 1",
     "prepare": "husky install"
-  }
+  },
+  "packageManager": "pnpm@latest"
 }

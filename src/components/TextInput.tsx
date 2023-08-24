@@ -23,7 +23,7 @@ const TextInput = React.forwardRef<
   const cursorColor = getColor(theme, props.cursorColor || "primary");
   const placeholderTextColor = getColor(
     theme,
-    props.placeholderTextColor || "lightGray"
+    props.placeholderTextColor || "lightGray",
   );
   const selectionColor = getColor(theme, props.selectionColor || "primary");
 

@@ -12,7 +12,7 @@ export type CosmicTextProps<P> = P & {
 
 export const translateCosmicTextStyles = <T extends TextStyle>(
   theme: CosmicTheme,
-  style?: CosmicTextStyle
+  style?: CosmicTextStyle,
 ): Partial<T> => {
   style = translateCosmicViewStyles(theme, style);
 
@@ -35,7 +35,7 @@ export const translateCosmicTextStyles = <T extends TextStyle>(
 };
 
 const withTextStyle = <P extends { style?: any }>(
-  Component: React.ComponentType<P>
+  Component: React.ComponentType<P>,
 ): React.ForwardRefExoticComponent<
   React.PropsWithoutRef<CosmicTextProps<P>> & React.RefAttributes<any>
 > => {

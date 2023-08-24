@@ -5,7 +5,7 @@ export type FontTypes = "light" | "regular" | "bold";
 
 export const getFont = (
   theme: CosmicTheme,
-  weight: string
+  weight: string,
 ): [string, TextStyle["fontWeight"]] => {
   switch (weight) {
     case "light":

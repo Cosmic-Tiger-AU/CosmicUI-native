@@ -14,3 +14,4 @@ export type {
 export type { CosmicTextStyle } from "./types/cosmic-text-style";
 export type { CosmicViewStyle } from "./types/cosmic-view-style";
 export type { CosmicTheme } from "./types/cosmic-theme";
+export type { CosmicTextInputProps } from "./components/TextInput";

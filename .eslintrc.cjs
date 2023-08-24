@@ -20,6 +20,8 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
     "react/prop-types": "off",
+    "import/no-unresolved": "off", // buggy
+    "import/namespace": "off", // buggy
   },
   settings: {
     react: {

@@ -32,4 +32,6 @@ const TextInput = React.forwardRef<
   return <StyledTextInput ref={ref} {...props} {...colorProps} />;
 });
 
+TextInput.displayName = "TextInput";
+
 export default TextInput;

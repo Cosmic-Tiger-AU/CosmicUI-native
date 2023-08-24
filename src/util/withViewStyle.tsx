@@ -10,7 +10,7 @@ export type CosmicViewProps<P> = P & {
 
 export const translateCosmicViewStyles = <T extends ViewStyle>(
   theme: CosmicTheme,
-  style?: CosmicViewStyle
+  style?: CosmicViewStyle,
 ): Partial<T> => {
   if (style.backgroundColor)
     style.backgroundColor = getColor(theme, style.backgroundColor);
@@ -39,7 +39,7 @@ export const translateCosmicViewStyles = <T extends ViewStyle>(
 };
 
 const withViewStyle = <P extends { style?: any }>(
-  Component: React.ComponentType<P>
+  Component: React.ComponentType<P>,
 ): React.ForwardRefExoticComponent<
   React.PropsWithoutRef<CosmicViewProps<P>> & React.RefAttributes<any>
 > => {

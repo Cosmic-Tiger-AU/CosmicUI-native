@@ -10,7 +10,7 @@ import { CosmicStyles } from "~/types/cosmic-styles";
 export const translateCosmicStyles = <
   T extends ViewStyle | TextStyle | ImageStyle,
 >(
-  shorthand?: CosmicStyles
+  shorthand?: CosmicStyles,
 ): Partial<T> => {
   if (!shorthand) {
     return {};

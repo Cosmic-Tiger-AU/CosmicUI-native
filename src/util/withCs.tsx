@@ -60,7 +60,7 @@ export const getWeight = (theme: CosmicTheme, weight: string): number => {
 };
 
 const withCs = <P extends { style?: any }>(
-  Component: ComponentType<P>
+  Component: ComponentType<P>,
 ): React.ForwardRefExoticComponent<
   PropsWithoutRef<CosmicProps<P>> & RefAttributes<any>
 > => {
